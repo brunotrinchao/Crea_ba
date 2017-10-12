@@ -1,0 +1,64 @@
+page-sobre-o-app {
+    .button {
+        margin-top: 25px;
+    }
+
+    img{
+        height: auto;
+    }
+    a {
+        color: #0047bc;
+        text-decoration: underline;
+        font-weight: bold;
+        &:hover {
+            color: #000;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    }
+    p {
+        font-size: 15px;
+        line-height: 1.65;
+        padding-top: 6px;
+        color: #333;
+        margin: 0 0 10px;
+    }
+    h2 {
+        font-size: 28px;
+        line-height: 1.25em;
+        margin-bottom: 10px;
+        margin-top: 30px;
+        font-weight: 900;
+        padding-top: 12px;
+    }
+    h3 {
+        font-size: 20px;
+        line-height: 1.25em;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 900;
+        padding-top: 12px;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        margin: 15px 0px
+    }
+    blockquote {
+        margin: 0 0 20px;
+        padding: 10px 20px;
+        border-left: 5px solid #0047bc;
+        quotes: none;
+        p {
+            font-size: 21px !important;
+            line-height: 1.0em;
+            margin: 0 0 20px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            color: #333;
+        }
+        cite {
+            font-style: normal;
+        }
+    }
+}

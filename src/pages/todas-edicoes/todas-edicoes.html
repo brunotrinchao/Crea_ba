@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>{{titulo}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+    <div class="EdiTop" padding>
+        <div class="EdiThu" (click)="goTo(firstEdition?.id, firstEdition?.number)">
+            <img src="{{firstEdition?.cover}}" alt="">
+        </div>
+        <div class="EdiInf">
+            <div class="EdiTit" (click)="goTo(firstEdition?.id, firstEdition?.number)">
+                {{firstEdition?.title}}
+            </div>
+            <div class="EdiSubTit SubTitNot" (click)="goTo(firstEdition?.id, firstEdition?.number)">
+                {{firstEdition?.caption}}
+            </div>
+        </div>
+    </div>
+    <div class="InfSep"></div>
+    <div class="EdiAnt" padding>
+        <div class="TitEdiAnt">
+            Edições <strong>Anteriores</strong>
+        </div>
+        <ion-list>
+            <button ion-item detail-none *ngFor="let item of editions" (click)="goTo(item?.edition.id, item?.edition.number)">
+                <div clas="EdiAndThuAre">
+                <div class="EdiAndThu">
+                    <img src="{{item?.edition.cover}}" alt="">
+                </div>
+                    </div>
+                <div class="EdiAndTit">
+                    {{item?.edition.title}}
+                </div>
+        </button>
+        </ion-list>
+    </div>
+</ion-content>

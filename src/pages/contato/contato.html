@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>{{titulo}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <form [formGroup]="contato" (ngSubmit)="contForm()">
+        <ion-list>
+
+            <ion-item>
+                <ion-label floating>Nome</ion-label>
+                <ion-input type="text" name="name" formControlName="name"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label floating>E-mail</ion-label>
+                <ion-input type="email" name="email" formControlName="email"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label floating>Telefone</ion-label>
+                    <ion-input type="tel"  name="phone" formControlName="phone" mask="(**)*****-****"></ion-input>      
+                </ion-item>
+
+            <ion-item>
+                <ion-label floating>Mensagem</ion-label>
+                <ion-textarea rows="5" name="message" formControlName="message"></ion-textarea>
+            </ion-item>
+
+        </ion-list>
+        <div padding>
+            <button [disabled]="contato.invalid" ion-button  block large icon-left color="primary" type="submit" >
+                <ion-icon name="paper-plane"></ion-icon>Enviar</button>
+        </div>
+    </form>
+</ion-content>

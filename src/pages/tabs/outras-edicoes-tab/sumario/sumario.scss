@@ -1,0 +1,73 @@
+page-sumario {
+    .list {
+        .item {
+            padding: 0;
+            margin-bottom: 10px;
+            ion-thumbnail {
+                width: 50%;
+                min-height: auto;
+                margin: 0;
+                .ThuSum {
+                    width: 100%;
+                    border-radius: 3px;
+                    position: relative;
+                    height: 0;
+                    overflow: hidden;
+                    padding-bottom: 75%;
+                    img {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        height: 100%;
+                        width: auto;
+                        min-width: 100%;
+                        min-height: 1005;
+                        max-width: none;
+                        -webkit-transform: translate(-50%, -50%);
+                        -ms-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+            .item-inner {
+                border: 0;
+                width: 50%;
+                box-sizing: border-box;
+                padding: 0px 10px;
+                .label{
+                  display: flex;
+                  margin:0;
+                  justify-content: flex-start;
+                  flex-wrap: wrap;
+                  white-space:normal;
+                .TitCat {
+                  margin:0;
+                //margin-bottom: 15px;
+                }
+                .SubTitNot {
+                    display: none;
+                }
+                }
+            }
+            &:nth-child(5n+1) {
+                flex-wrap: wrap;
+                ion-thumbnail {
+                    min-width: 100%;
+                }
+                .item-inner {
+                    width: 100%;
+                    padding-left: 0;
+                    .TitCat{
+                      margin-top: 10px;
+                    }
+                    .TitNot {
+                        font-size: 30px;
+                    }
+                    .SubTitNot {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

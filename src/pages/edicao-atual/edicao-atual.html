@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar color="primary" align-title="left">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title><img src="{{logoTopo}}" height="30px" class="logo_topo"> <span>{{edicao}}</span></ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+    <ion-tabs color="primary">
+        <ion-tab tabTitle="{{SumEdicao}}" [root]="tab1" [rootParams]="{id: idEdi}"></ion-tab>
+        <ion-tab tabTitle="{{PalPresidente}}" [root]="tab2" [rootParams]="{id: idEdi}"></ion-tab>
+        <ion-tab tabTitle="{{EspLeitor}}" [root]="tab3" [rootParams]="{id: idEdi}"></ion-tab>
+        <ion-tab tabTitle="{{ExpEdicao}}" [root]="tab4" [rootParams]="{id: idEdi}"></ion-tab>
+    </ion-tabs>
+</ion-content>

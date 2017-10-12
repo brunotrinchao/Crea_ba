@@ -1,0 +1,138 @@
+// http://ionicframework.com/docs/v2/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+// MENU
+.MeuMen {
+    .header {
+        .title {
+            .toolbar-title {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                display: flex;
+                ion-icon {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+    .content {
+        button.item {
+            &:last-child {
+                margin-top: 10px;
+                padding-top: 10px;
+                border-top: 1px solid #ccc;
+            }
+            .item-inner {
+                border: 0;
+                .input-wrapper {
+                    .label {
+                        margin: 16px 8px 16px 0;
+                        text-transform: uppercase;
+                        color: #6c6c5b;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Tatulo da categoria
+.TitCat {
+    color: #0047bc;
+    font-size: 11px;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 25px;
+    &:before {
+        content: "";
+        width: 25px;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        background-color: #0047bc;
+    }
+}
+
+// Título da noticia
+.TitNot {
+    color: #000;
+    font-weight: 900;
+    font-family: "Roboto", "Helvetica Neue", "Segoe UI", sans-serif;
+    line-height: 1.1;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    white-space: normal;
+    font-size: 14px;
+}
+
+// Sub titulo da noticia
+.SubTitNot {
+    color: #333;
+    white-space: normal;
+    font-size: 17px;
+    line-height: 1.35;
+    font-weight: normal;
+    p {
+        color: inherit;
+        white-space: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        font-weight: inherit;
+        margin: 0;
+    }
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.65;
+    padding-top: 6px;
+    color: #333;
+}
+
+// Alterações para iOS
+.MeuMen .content button.item:last-child{
+    border-bottom: 0;
+}
+.menu-inner{
+    .toolbar-ios {
+        .toolbar-content-ios {
+            .title-ios {
+                padding-left: 20px;
+                padding-right: 40px;
+            }
+        }
+    }
+}
+
+.toolbar-ios ion-title {
+    padding: 0 58px 1px;
+}
+/*body:after{
+    content: "Versão teste";
+    position: absolute;
+    top: 50%;
+    left: 1vmin;
+    color: #f00;
+    font-size: 40px;
+    width: 98vmin;
+    text-align: center;
+    opacity: 0.4;
+    border: 1px solid #f00;
+}*/
+
+.toolbar-title-ios {
+    line-height: 1.7rem;
+}

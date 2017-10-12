@@ -1,0 +1,57 @@
+page-palavra-presidente {
+    .TopInfo {
+        .InfGer {
+            .TitNot {
+                font-size: 30px;
+            }
+            .SubTitNot {
+                display: block;
+            }
+        }
+        .InfSep {
+            border-bottom: 2px solid #ccc;
+        }
+        .InfAut {
+            display: flex;
+            justify-content: space-between;
+            height: 35vmin;
+            .InfAutAre {
+                width: 35%;
+                .InfAutThu {
+                    width: 100%;
+                    border-radius: 3px;
+                    position: relative;
+                    height: 0;
+                    overflow: hidden;
+                    padding-bottom: 100%;
+                    img {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        height: 100%;
+                        width: auto;
+                        max-width: none;
+                        -webkit-transform: translate(-50%, -50%);
+                        -ms-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+            .InfAutInf {
+                width: 65%;
+                padding: 0px 10px;
+                box-sizing: border-box;
+                .InfAutNom {
+                    margin-top: 0;
+                    margin-bottom: 5px;
+                }
+                .InfAutRes {
+                    font-size: 12px
+                }
+            }
+        }
+    }
+    .ConGer{
+        padding-top: 0px !important;
+    }
+}

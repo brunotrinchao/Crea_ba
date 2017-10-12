@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar color="primary">
+      <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+      <ion-title>{{data.title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div [innerHtml]="data.content"></div>
+ 
+</ion-content>

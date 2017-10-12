@@ -1,0 +1,26 @@
+<ion-content padding>
+    <ion-list>
+
+        <ion-item *ngFor="let item of data[0]; let i = index">
+            <ion-thumbnail item-start (click)="goTo(item?.id)">
+                <div class="ThuSum">
+                    <img-loader src="{{item?.img}}" useImg></img-loader>
+                </div>
+            </ion-thumbnail>
+            <div class="TitCat" (click)="goTo(item?.id)">
+                #{{item?.category}}
+            </div>
+            <div class="TitNot" (click)="goTo(item?.id)">
+                {{item?.title}}
+            </div>
+            <div class="SubTitNot" (click)="goTo(item?.id)">
+                <p>{{item?.caption}}</p>
+            </div>
+        </ion-item>
+    </ion-list>
+
+    <ion-infinite-scroll (ionInfinite)="$event.waitFor(doInfinite())">
+            <ion-infinite-scroll-content loadingText="Carregando..."></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+</ion-content>

@@ -1,0 +1,8 @@
+{
+  "name": "Crea",
+  "app_id": "c88e18f0",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
