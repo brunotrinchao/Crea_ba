@@ -12,17 +12,17 @@
             </div>
         </div>
         <div class="InfSep"></div>
-        <div class="InfAut" padding>
+        <div class="InfAut"  *ngFor="let item of author" padding>
             <div class="InfAutAre">
                 <div class="InfAutThu">
-                     <img src="{{data[0]?.img}}" alt="" >
+                     <img src="{{item?.photo}}" alt="" >
                 </div>
             </div>
             <div class="InfAutInf">
-                <div class="InfAutNom TitNot"  [innerHTML]="data[0]?.author">
+                <div class="InfAutNom TitNot"  [innerHTML]="item?.name">
                     
                 </div>
-                <div class="InfAutRes SubTitNot" [innerHTML]="data[0]?.about">
+                <div class="InfAutRes SubTitNot" [innerHTML]="item?.info">
                     
                 </div>
             </div>

@@ -15,6 +15,7 @@ export class PalavraPresidentePage {
   
   idEdition: number;
   data: any = [];
+  author: any = [];
 
   constructor(
     public navCtrl: NavController, 
@@ -39,14 +40,14 @@ export class PalavraPresidentePage {
         this.edicaoService.reqOthers(this.idEdition, 'wordPresident').then(dataWordPresident => {
            this.data.push(dataWordPresident.wordPresident);
           
-            var inicio = this.data[0].text.indexOf("<strong>Marco Amigo");
-            var fim = this.data[0].text.lastIndexOf("</p>")   ;
-            var resPre = this.data[0].text.substring(inicio, fim);
-            resPre = resPre.split("<br />");
-             this.data[0].author = resPre[0];
-             this.data[0].about = resPre[1];
-
-                 
+          if(this.data[0].author){
+            this.author.push({
+              name : this.data[0].author.name,
+              info : this.data[0].author.info,
+              photo : this.data[0].author.photo
+            })
+          }
+  
           this.loading.dismiss();
           
         }, erro => {
